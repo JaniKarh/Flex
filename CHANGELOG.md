@@ -1,3 +1,11 @@
+## 1.2.1
+
+First update from me.
+- Updated to Font Awesome to 4.6.3
+- Changed syntax highlight to [Prism.js](http://prismjs.com/)
+- Added Prism-relevant Gulp tasks
+- Small styling edits
+
 ## 1.2.0
 
 - [Update font-awesome](https://github.com/alexandrevicenzi/Flex/issues/31)

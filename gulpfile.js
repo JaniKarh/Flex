@@ -1,7 +1,8 @@
 var gulp = require('gulp'),
     less = require('gulp-less'),
     rename = require('gulp-rename'),
-    minify = require('gulp-cssnano');
+    minify = require('gulp-cssnano'),
+    uglify = require('gulp-uglify');
 
 gulp.task('less', function () {
     return gulp.src('./static/stylesheet/style.less')
@@ -11,6 +12,21 @@ gulp.task('less', function () {
             extname: '.min.css'
         }))
         .pipe(gulp.dest('./static/stylesheet'));
+});
+
+gulp.task('prism-css', function () {
+    return gulp.src('./static/prism/prism.css')
+        .pipe(minify())
+        .pipe(rename({
+            extname: '.min.css'
+        }))
+        .pipe(gulp.dest('./static/prism/dest'));
+});
+
+gulp.task('prism-js', function () {
+    return gulp.src('./static/prism/prism.js')
+        .pipe(uglify())
+        .pipe(gulp.dest('./static/prism/dest'));
 });
 
 gulp.task('cp', function () {
@@ -29,3 +45,4 @@ gulp.task('pygments', function () {
 
 
 gulp.task('default', ['less', 'cp', 'pygments']);
+
