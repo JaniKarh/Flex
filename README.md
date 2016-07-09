@@ -1,6 +1,6 @@
-# Flex [![Build Status](https://travis-ci.org/alexandrevicenzi/Flex.svg?branch=master)](https://travis-ci.org/alexandrevicenzi/Flex) [![Dependency Status](https://david-dm.org/alexandrevicenzi/Flex.svg)](https://david-dm.org/alexandrevicenzi/Flex)
+# Flex
 
-A minimalist [Pelican](http://blog.getpelican.com/) theme.
+A minimalist [Pelican](http://blog.getpelican.com/) theme forked from [https://github.com/alexandrevicenzi/Flex/](https://github.com/alexandrevicenzi/Flex/).
 
 ## Features
 
@@ -10,7 +10,8 @@ A minimalist [Pelican](http://blog.getpelican.com/) theme.
 - SEO Best Practices
 - Open Graph
 - Rich Snippets (JSON-LD)
-- [Multiple Code Highlight Styles](https://github.com/alexandrevicenzi/Flex/wiki/Code-Highlight)
+- Syntax Highlight with [Prism.js](http://prismjs.com/)
+- Font Awesome icons
 
 ## Integrations
 
@@ -24,9 +25,7 @@ A minimalist [Pelican](http://blog.getpelican.com/) theme.
 
 ## Install
 
-The recommend way to install is over [pelican-themes](https://github.com/getpelican/pelican-themes).
-
-The `master` branch is the development branch. If you're happy with fresh new things and maybe sometimes (~most of time~) broken things you can clone the `master`, but I would recommend to you to clone a tag branch.
+Clone this repo to your local development environment and call from `pelicanconf.py` like `THEME = '../../../flex'`.
 
 ## Docs
 
@@ -40,18 +39,9 @@ As always, if you want something that only make sense to you, just fork Flex and
 
 ## Live example
 
-You can see how things looks like [here](https://blog.alexandrevicenzi.com/flex-pelican-theme.html).
-Or you can take a look at [Flex users](https://github.com/alexandrevicenzi/Flex/wiki/Flex-users).
+I'm using Flex in my [personal blog](http://janikarhunen.fi/).
 
-I'm using Flex in my [personal blog](http://blog.alexandrevicenzi.com/).
-
-![Screenshot](https://github.com/alexandrevicenzi/Flex/blob/master/screenshot.png)
-
-## Donate
-
-Did you liked? Buy me a coffee.
-
-[![Gratipay](https://img.shields.io/gratipay/JSFiddle.svg?style=flat-square)](https://gratipay.com/~alexandrevicenzi/)
+Or you can take a look at other [Flex users](https://github.com/alexandrevicenzi/Flex/wiki/Flex-users).
 
 ## License
 
