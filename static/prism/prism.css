@@ -26,6 +26,9 @@ pre[class*="language-"] {
 	-moz-hyphens: none;
 	-ms-hyphens: none;
 	hyphens: none;
+
+	/*font-size: .92em;
+	line-height: 1.5em;*/
 }
 
 pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
@@ -161,7 +164,6 @@ pre.line-numbers > code {
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
-
 }
 
 	.line-numbers-rows > span {
