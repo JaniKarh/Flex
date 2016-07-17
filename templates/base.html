@@ -14,7 +14,7 @@
   <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/font-awesome/css/font-awesome.min.css">
   
   <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/prism/prism.css" />
-  <script type="text/javascript" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/prism/prism.js"></script>
+  <script type="text/javascript" async src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/prism/prism.js"></script>
 
   {% if CUSTOM_CSS %}
     <link href="{{ SITEURL }}/{{ CUSTOM_CSS }}" rel="stylesheet">
@@ -136,9 +136,7 @@
     {% include "partial/guages.html" %}
   {% endif %}
 
-  {% if ADD_THIS_ID %}
-    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid={{ ADD_THIS_ID }}" async="async"></script>
-  {% endif %}
+  
 
   {% if PIWIK_URL and PIWIK_SITE_ID %}
     {% include "partial/piwik.html" %}
@@ -147,5 +145,9 @@
   {% include "partial/jsonld.html" %}
 
   {% block additional_js %}{% endblock %}
+
+  {% if ADD_THIS_ID %}
+    <script type="text/javascript" async src="//s7.addthis.com/js/300/addthis_widget.js#pubid={{ ADD_THIS_ID }}"></script>
+  {% endif %}
 </body>
 </html>
