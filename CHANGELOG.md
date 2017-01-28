@@ -1,10 +1,27 @@
-## 1.2.1
+## 2.1.1
 
-First update from me.
-- Updated to Font Awesome to 4.6.3
+First update from me (on the 2.x.x version).
 - Changed syntax highlight to [Prism.js](http://prismjs.com/)
 - Added Prism-relevant Gulp tasks
-- Small styling edits
+- Styling edits
+
+## 2.1.0
+
+- Italian translation [#60](https://github.com/alexandrevicenzi/Flex/issues/60)
+- Hungarian transltion [#59](https://github.com/alexandrevicenzi/Flex/issues/59)
+- Russian transltion [#58](https://github.com/alexandrevicenzi/Flex/issues/58)
+- [Google AdSense support](https://github.com/alexandrevicenzi/Flex/issues/47)
+
+## 2.0.0
+
+- [Minute read like Medium](https://github.com/alexandrevicenzi/Flex/issues/48) (via plugin)
+- [Theme translations](https://github.com/alexandrevicenzi/Flex/wiki/Translation-support)
+- Updated font-awesome
+- Changed `Cover` metadata to use relative path.
+
+This version includes de, fr and pt_BR translations.
+
+Special thanks to @marcelhuth.
 
 ## 1.2.0
 
@@ -12,6 +29,7 @@ First update from me.
 - [Added browser color configuration](https://github.com/alexandrevicenzi/Flex/pull/34)
 - [Related posts](https://github.com/alexandrevicenzi/Flex/pull/27)
 - [More Pygments Styles](https://github.com/alexandrevicenzi/Flex/issues/38)
+- [Add StatusCake RUM support](https://github.com/alexandrevicenzi/Flex/issues/16)
 
 ## 1.1.1
 

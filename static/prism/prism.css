@@ -1,4 +1,4 @@
-/* http://prismjs.com/download.html?themes=prism&languages=markup+css+clike+javascript+bash+json+markdown+python+sql+yaml&plugins=line-numbers+show-language */
+/* http://prismjs.com/download.html?themes=prism&languages=markup+css+clike+javascript+bash+docker+ini+java+json+latex+less+makefile+markdown+nginx+powershell+python+jsx+scala+sql+yaml&plugins=line-numbers+toolbar+show-language */
 /**
  * prism.js default theme for JavaScript, CSS and HTML
  * Based on dabblet (http://dabblet.com)
@@ -26,9 +26,6 @@ pre[class*="language-"] {
 	-moz-hyphens: none;
 	-ms-hyphens: none;
 	hyphens: none;
-
-	/*font-size: .92em;
-	line-height: 1.5em;*/
 }
 
 pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
@@ -144,6 +141,8 @@ pre.line-numbers {
 	position: relative;
 	padding-left: 3.8em;
 	counter-reset: linenumber;
+
+	line-height: 1.2em;
 }
 
 pre.line-numbers > code {
@@ -164,6 +163,7 @@ pre.line-numbers > code {
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
+
 }
 
 	.line-numbers-rows > span {
@@ -179,33 +179,62 @@ pre.line-numbers > code {
 			padding-right: 0.8em;
 			text-align: right;
 		}
-div.prism-show-language {
+pre.code-toolbar {
 	position: relative;
 }
 
-div.prism-show-language > div.prism-show-language-label {
-	color: black;
-	background-color: #CFCFCF;
-	display: inline-block;
+pre.code-toolbar > .toolbar {
 	position: absolute;
-	bottom: auto;
-	left: auto;
-	top: 0;
-	right: 0;
-	width: auto;
-	height: auto;
-	font-size: 0.9em;
-	border-radius: 0 0 0 5px;
-	padding: 0 0.5em;
-	text-shadow: none;
-	z-index: 1;
-	-webkit-box-shadow: none;
-	-moz-box-shadow: none;
-	box-shadow: none;
-	-webkit-transform: none;
-	-moz-transform: none;
-	-ms-transform: none;
-	-o-transform: none;
-	transform: none;
+	top: .3em;
+	right: .2em;
+	transition: opacity 0.3s ease-in-out;
+	opacity: 0;
+}
+
+pre.code-toolbar:hover > .toolbar {
+	opacity: 1;
+}
+
+pre.code-toolbar > .toolbar .toolbar-item {
+	display: inline-block;
+}
+
+pre.code-toolbar > .toolbar a {
+	cursor: pointer;
+}
+
+pre.code-toolbar > .toolbar button {
+	background: none;
+	border: 0;
+	color: inherit;
+	font: inherit;
+	line-height: normal;
+	overflow: visible;
+	padding: 0;
+	-webkit-user-select: none; /* for button */
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+
+pre.code-toolbar > .toolbar a,
+pre.code-toolbar > .toolbar button,
+pre.code-toolbar > .toolbar span {
+	color: #bbb;
+	font-size: .8em;
+	padding: 0 .5em;
+	background: #f5f2f0;
+	background: rgba(224, 224, 224, 0.2);
+	box-shadow: 0 2px 0 0 rgba(0,0,0,0.2);
+	border-radius: .5em;
+}
+
+pre.code-toolbar > .toolbar a:hover,
+pre.code-toolbar > .toolbar a:focus,
+pre.code-toolbar > .toolbar button:hover,
+pre.code-toolbar > .toolbar button:focus,
+pre.code-toolbar > .toolbar span:hover,
+pre.code-toolbar > .toolbar span:focus {
+	color: inherit;
+	text-decoration: none;
 }
 

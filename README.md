@@ -1,6 +1,6 @@
 # Flex
 
-A minimalist [Pelican](http://blog.getpelican.com/) theme forked from [https://github.com/alexandrevicenzi/Flex/](https://github.com/alexandrevicenzi/Flex/).
+A [Pelican](http://blog.getpelican.com/) theme based on [https://github.com/alexandrevicenzi/Flex/](https://github.com/alexandrevicenzi/Flex/).
 
 ## Features
 
@@ -10,14 +10,18 @@ A minimalist [Pelican](http://blog.getpelican.com/) theme forked from [https://g
 - SEO Best Practices
 - Open Graph
 - Rich Snippets (JSON-LD)
+- Related Posts (via [plugin](https://github.com/getpelican/pelican-plugins/tree/master/related_posts))
+- Minute read like [Medium](https://medium.com/) (via [plugin](https://github.com/getpelican/pelican-plugins/tree/master/post_stats)) (new in 2.0)
 - Syntax Highlight with [Prism.js](http://prismjs.com/)
-- Font Awesome icons
+- As an alternative: [Multiple Code Highlight Styles](https://github.com/alexandrevicenzi/Flex/wiki/Code-highlight-support)
+- [Translation Support](https://github.com/alexandrevicenzi/Flex/wiki/Translation-support) (new in 2.0)
 
 ## Integrations
 
 - [AddThis](http://www.addthis.com/)
 - [Disqus](https://disqus.com/)
 - [Gauges](http://get.gaug.es/)
+- [Google AdSense](https://www.google.com.br/adsense/start/) (new in 2.1)
 - [Google Analytics](https://www.google.com/analytics/web/)
 - [Google Tag Manager](https://www.google.com/tagmanager/)
 - [Piwik](http://piwik.org/)
@@ -72,7 +76,15 @@ EXTRA_PATH_METADATA = {
 
 ## Install
 
-Clone this repo to your local development environment and call from `pelicanconf.py` like `THEME = '../../../flex'`.
+Clone this repo to your local development environment and call from `pelicanconf.py` like `THEME = '../../flex'`, relative to your directory setup.
+
+## Translate
+
+Translate this theme to new languages at [Transifex](https://www.transifex.com/alexandrevicenzi/flex-pelican/).
+
+![Translations](https://github.com/alexandrevicenzi/Flex/blob/master/translation_chart.png)
+
+Read more about [Translation Support](https://github.com/alexandrevicenzi/Flex/wiki/Translation-support).
 
 ## Docs
 
@@ -86,7 +98,7 @@ As always, if you want something that only make sense to you, just fork Flex and
 
 ## Live example
 
-I'm using Flex in my [personal blog](http://janikarhunen.fi/).
+I'm using Flex on my [personal website](http://janikarhunen.fi/).
 
 Or you can take a look at other [Flex users](https://github.com/alexandrevicenzi/Flex/wiki/Flex-users).
 

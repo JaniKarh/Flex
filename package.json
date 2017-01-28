@@ -1,7 +1,7 @@
 {
   "name": "flex",
-  "version": "1.2.0",
-  "description": "A minimalist Pelican theme",
+  "version": "2.1.0",
+  "description": "A nice Pelican theme",
   "main": "gulpfile.js",
   "directories": {
     "test": "tests"
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alexandrevicenzi/Flex.git"
+    "url": "git+https://github.com/JaniKarh/Flex.git"
   },
   "keywords": [
     "pelican"
@@ -20,14 +20,15 @@
   "author": "Alexandre Vicenzi",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/alexandrevicenzi/Flex/issues"
+    "url": "https://github.com/JaniKarh/Flex/issues"
   },
-  "homepage": "https://github.com/alexandrevicenzi/Flex#readme",
+  "homepage": "https://github.com/JaniKarh/Flex#readme",
   "dependencies": {
     "font-awesome": "^4.6.1",
     "gulp": "^3.9.0",
     "gulp-cssnano": "^2.1.0",
     "gulp-less": "^3.0.5",
-    "gulp-rename": "^1.2.2"
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.0.0"
   }
 }

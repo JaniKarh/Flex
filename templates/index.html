@@ -1,27 +1,43 @@
 {% extends "base.html" %}
 
 {% block content %}
+
+{% if GOOGLE_ADSENSE and GOOGLE_ADSENSE.ads.index_top %}
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <ins class="adsbygoogle ads-responsive"
+       data-ad-client="{{ GOOGLE_ADSENSE.ca_id }}"
+       data-ad-slot="{{ GOOGLE_ADSENSE.ads.index_top }}"></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+{% endif %}
+
 {% for article in articles_page.object_list %}
 <article>
   <header>
     <h2><a href="{{ SITEURL }}/{{ article.url }}#{{ article.slug }}">{{ article.title }}</a></h2>
     <p>
-      Posted on {{ article.locale_date }} in <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
-      {% if article.tags %}
-      &#8226; Tagged with
-      {% for tag in article.tags %}
-      <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>{% if not loop.last %},{% endif %}
-      {% endfor %}
+      {{ _('Posted on %(when)s in %(category)s',
+           when=article.locale_date,
+           category='<a href="%s/%s">%s</a>'|format(SITEURL, article.category.url, article.category)|safe) }}
+
+      {% if article.tags and not HOME_HIDE_TAGS %}
+          &#8226; {{ _('Tagged with') }}
+          {% for tag in article.tags %}
+              <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>{% if not loop.last %},{% endif %}
+          {% endfor %}
       {% endif %}
-      {% if DISQUS_SITENAME %}
-      &#8226; <a href="{{ SITEURL }}/{{ article.url }}#disqus_thread">Leave a comment</a>
+
+      {% if 'post_stats' in PLUGINS %}
+        &#8226; {{ article.stats['read_mins'] }} min read
       {% endif %}
     </p>
   </header>
   <div>
     {% if summarise or article.metadata['summary'] or SUMMARY_MAX_LENGTH %}
       {{ article.summary }}
-      <a class="btn" href="{{ SITEURL }}/{{ article.url }}#{{ article.slug }}">Continue reading</a>
+      <br>
+      <a class="btn" href="{{ SITEURL }}/{{ article.url }}#{{ article.slug }}">{{ _('Continue reading') }}</a>
     {% else %}
       {{ article.content }}
     {% endif %}
@@ -33,8 +49,16 @@
 {% endfor %}
 
 {% include "partial/pagination.html" %}
-{% endblock %}
 
-{% block additional_js %}
-  {% include "partial/disqus_count.html" %}
+{% if GOOGLE_ADSENSE and GOOGLE_ADSENSE.ads.index_bottom %}
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <ins class="adsbygoogle ads-responsive"
+       data-ad-client="{{ GOOGLE_ADSENSE.ca_id }}"
+       data-ad-slot="{{ GOOGLE_ADSENSE.ads.index_bottom }}"></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+{% endif %}
+
+
 {% endblock %}
