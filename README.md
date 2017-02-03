@@ -76,7 +76,13 @@ EXTRA_PATH_METADATA = {
 
 ## Install
 
-Clone this repo to your local development environment and call from `pelicanconf.py` like `THEME = '../../flex'`, relative to your directory setup.
+Clone this repo to your local development environment and call from `pelicanconf.py` like `THEME = '../flex'`, relative to your directory setup.
+
+## Development
+
+Install required Node modules with `npm install` (package.json).
+
+After changes, less > min.css with `gulp less`. See `gulpfile.js` for more.
 
 ## Translate
 
