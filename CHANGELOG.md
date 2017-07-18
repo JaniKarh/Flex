@@ -1,3 +1,10 @@
+## 2.2.0
+
+- New Prism.js Theme with small modifications.
+- Modified date to articles, if article has *modified* field in Markdown/reST.
+- Typography update to headings.
+- Increased text size throughout.
+
 ## 2.1.1
 
 First update from me (on the 2.x.x version).

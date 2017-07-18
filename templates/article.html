@@ -18,6 +18,10 @@
            when=article.locale_date,
            category='<a href="%s/%s">%s</a>'|format(SITEURL, article.category.url, article.category)|safe) }}
 
+      {% if article.modified %}
+        {{ _('(Last modified on %(when)s)', when=article.locale_modified) }}
+      {% endif %}
+
       {% if 'post_stats' in PLUGINS %}
         &#8226; {{ article.stats['read_mins'] }} min read
       {% endif %}
@@ -50,7 +54,6 @@
   {% if ADD_THIS_ID %}
   <div class="center social-share">
     <p>{{ _('Like this article? Please share!') }}</p>
-    <div class="addthis_native_toolbox"></div>
     <div class="addthis_sharing_toolbox"></div>
   </div>
   {% endif %}

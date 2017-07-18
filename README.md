@@ -92,6 +92,23 @@ Translate this theme to new languages at [Transifex](https://www.transifex.com/a
 
 Read more about [Translation Support](https://github.com/alexandrevicenzi/Flex/wiki/Translation-support).
 
+## Prism.js tweaks
+
+This theme uses [Prism.js](http://prismjs.com/) for syntax highlight. Theme is Okaidia, and the following plugins are included:
+
+- Line Numbers
+- Copy to Clipboard Button
+
+After downloading, there are couple of things necessary to modify in `prism.css`:
+
+### Fix line height issue for Line Numbers
+
+Add `line-height: 1.2em;` in selector `pre.line-numbers`.
+
+### Change background color of code bocks
+
+Change `background: #272822;` to `background: #333;` in selector `:not(pre) > code[class*="language-"], pre[class*="language-"]`.`
+
 ## Docs
 
 [Go to Wiki](https://github.com/alexandrevicenzi/Flex/wiki)
@@ -105,8 +122,6 @@ As always, if you want something that only make sense to you, just fork Flex and
 ## Live example
 
 I'm using Flex on my [personal website](http://janikarhunen.fi/).
-
-Or you can take a look at other [Flex users](https://github.com/alexandrevicenzi/Flex/wiki/Flex-users).
 
 ## License
 
