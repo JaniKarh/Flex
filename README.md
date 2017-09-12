@@ -109,6 +109,8 @@ Add `line-height: 1.2em;` in selector `pre.line-numbers`.
 
 Change `background: #272822;` to `background: #333;` in selector `:not(pre) > code[class*="language-"], pre[class*="language-"]`.`
 
+Minify the css with `gulp prism-css` and uglify the js with `gulp prism-js`.
+
 ## Docs
 
 [Go to Wiki](https://github.com/alexandrevicenzi/Flex/wiki)
