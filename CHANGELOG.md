@@ -1,3 +1,6 @@
+## 2.2.1
+- Fixed a padding issue on code blocks.
+
 ## 2.2.0
 
 - New Prism.js Theme with small modifications.

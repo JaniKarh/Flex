@@ -8,7 +8,8 @@
   },
   "scripts": {
     "test": "source venv/bin/activate && pip install pelican markdown && pelican -s tests/pelicanconf.py && deactivate",
-    "build": "node_modules/gulp/bin/gulp.js default"
+    "build": "node_modules/gulp/bin/gulp.js default",
+    "lessen": "node_modules/gulp/bin/gulp.js less"
   },
   "repository": {
     "type": "git",
@@ -23,12 +24,13 @@
     "url": "https://github.com/JaniKarh/Flex/issues"
   },
   "homepage": "https://github.com/JaniKarh/Flex#readme",
-  "dependencies": {
-    "font-awesome": "^4.6.1",
-    "gulp": "^3.9.0",
-    "gulp-cssnano": "^2.1.0",
-    "gulp-less": "^3.0.5",
+  "dependencies": {},
+  "devDependencies": {
+    "font-awesome": "^4.7.0",
+    "gulp": "^3.9.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-less": "^3.4.0",
     "gulp-rename": "^1.2.2",
-    "gulp-uglify": "^2.0.0"
+    "gulp-uglify": "^2.1.2"
   }
 }
