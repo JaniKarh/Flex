@@ -1,3 +1,6 @@
+## 2.2.2
+- Added static front page with fullscreen background image.
+
 ## 2.2.1
 - Fixed a padding issue on code blocks.
 
